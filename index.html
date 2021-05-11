@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Header avec logo et option accessibilité -->
+    <header class="">
+
+        <article class="header_article_deactivated">
+            <img src="images/logo.svg" alt="Logo circulaire W by D signifiant widgets by Dylan">
+            <h1 onclick="accessibility_on();">ACCESSIBILITÉ</h1>
+        </article>
+
+        <!-- Liste qui n'apparaît qu'en menu accessible -->
+        <ul class="header_ul_deactivated">
+            <li class="header_activated_ul_li" onclick="accessibility_meteo();">Météo</li>
+            <li onclick="accessibility_calc();">Calculatrice</li>
+            <li onclick="accessibility_convert();">Convertisseur</li>
+            <li onclick="accessibility_fete();">Fête</li>
+        </ul>
+
+    </header>
+
+
+    <!-- Main avec beaucoup d'éléments qui ne seront visibles qu'une fois le bouton appuyé -->
+    <main>
+
+        <!-- Button back, caché la plupart du temps -->
+        <button></button>
+
+        <!-- Bouton principal qui déroule le reste -->
+        <button onclick="button_tapped();clickcounter();" class="button_untapped">+</button>
+
+        <!-- Widget météo -->
+        <div class="widget widget_deactivated">
+            
+        </div>
+
+        <!-- Une fois ouvert, widget complet -->
+
+        <!-- Input pour rentrer la ville -->
+        <input type="text">
+
+        <!-- Article qui comprend l'icône ainsi que son thème, la température, feelslike et les risques de précipitations -->
+        <article>
+            <h2></h2>
+            <p>Température ressentie : XX°C</p>
+            <p></p>
+            <p>Risques de précipitations : XX%</p>
+        </article>
+
+        <!-- Liste avec images et heures pour donner le début de journée et la fin -->
+        <ul>
+            <li><img src="images/sunrise.svg" alt="Un soleil levant">
+                <p></p>
+            </li>
+            <li><img src="images/sunset.svg" alt="Un soleil couchant">
+                <p></p>
+            </li>
+        </ul>
+
+        <!-- Lien vers modal -->
+        <h3>Prévisions sur 7 jours</h3>
+        <img src="images/modal.svg" alt="Une flèche vers le bas">
+
+        <!-- Modal -->
+        <div>
+            <h3>Prévisions sur 7 jours</h3>
+            <img src="images/modal_up.svg" alt="Une flèche vers le haut">
+
+            <!-- Jours, icônes, risques de précipitations et températures (max et min) -->
+            <article>
+                <p>Demain</p>
+                <img src="images/cloudy.svg" alt="Deux nuages gris">
+                <p></p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </article>
+
+            <article>
+                <p></p>
+                <img src="images/cloudy.svg" alt="Deux nuages gris">
+                <p></p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </article>
+
+            <article>
+                <p></p>
+                <img src="images/cloudy.svg" alt="Deux nuages gris">
+                <p></p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </article>
+
+            <article>
+                <p></p>
+                <img src="images/cloudy.svg" alt="Deux nuages gris">
+                <p></p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </article>
+
+            <article>
+                <p></p>
+                <img src="images/cloudy.svg" alt="Deux nuages gris">
+                <p></p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </article>
+
+            <article>
+                <p></p>
+                <img src="images/cloudy.svg" alt="Deux nuages gris">
+                <p></p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </article>
+
+            <article>
+                <p></p>
+                <img src="images/cloudy.svg" alt="Deux nuages gris">
+                <p></p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </article>
+        </div>
+        <!-- Fin des 7 jours -->
+
+        <!-- Widget calculatrice -->
+        <div class="widget widget_deactivated">
+            <ul>
+                <li><p>+</p><p>-</p></li>
+                <li><p>*</p><p>/</p></li>
+            </ul>
+        </div>
+
+        <!-- Version complète -->
+        <div>
+            <input type="text">
+            <ul>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>+</li>
+            </ul>
+            <ul>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>-</li>
+            </ul>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>x</li>
+            </ul>
+            <ul>
+                <li>0</li>
+                <li>,</li>
+                <li>=</li>
+                <li>÷</li>
+            </ul>
+            <img src="images/erase.svg" alt="Une icône pour effacer ce qui est présent à l'écran de la calculatrice">
+        </div>
+        <!-- Fin widget calculatrice -->
+
+
+        <!-- Widget convertisseur -->
+        <div class="widget widget_deactivated">
+            <img src="images/weight.svg" alt="Deux poids avec une flèche d'équivalence, un en kilogramme, un en livre.">
+        </div>
+
+        <!-- Version complète -->
+        <div>
+
+            <!--Ligne du haut -->
+            <ul>
+                <li>
+                    <form>
+                        <span>
+                            <select name="choix_unite" id=""></select>
+                        </span>
+                    </form>
+                </li>
+                <li><img src="images/equiv_arrow.svg" alt="Une flèche d'équivalence"></li>
+                <li>
+                    <form>
+                        <span>
+                            <select name="choix_unite2" id=""></select>
+                        </span>
+                    </form>
+                </li>
+            </ul>
+
+            <!-- Deuxième ligne -->
+            <ul>
+                <li><input type="text"></li>
+                <li><input type="text"></li>
+            </ul>
+
+            <!-- Icônes de fin, choix de type -->
+            <ul>
+                <li>
+                    <img src="images/weight_comp_selected.svg" alt="Icône représentant un poids">
+                    <img src="images/ruler_comp.svg" alt="Icône représentant une règle">
+                    <img src="images/temp_comp.svg" alt="Icône représentant un thermomètre">
+                    <img src="images/money_comp.svg" alt="Icône représentant le symbole euro">
+                </li>
+                <li>
+                    <img src="images/volume_comp.svg" alt="Icône représentant un cube">
+                    <img src="images/area_comp.svg" alt="Icône représentant une aire">
+                    <img src="images/speed_comp.svg" alt="Icône représentant un camion en train de rouler">
+                    <img src="images/time_comp.svg" alt="Icône représentant une horloge">
+                </li>
+            </ul>
+
+        </div>
+        <!-- Fin du widget convertisseur -->
+
+        <!-- Widget fête -->
+        <div class="widget widget_deactivated">
+            <p>Saint</p>
+            <p>XXXXX</p>
+        </div>
+        <!-- Version complète du widget -->
+        <div>
+            <!-- Rappel de la fête du jour -->
+            <h2>Aujourd'hui nous célébrons la saint XXXXX</h2>
+
+
+            <!-- Choix du jour et du mois -->
+            <ul>
+                <li>
+                    <h5>JOUR</h5>
+                    <form>
+                        <span>
+                            <select name="choix_jour" id=""></select>
+                        </span>
+                    </form>
+                </li>
+
+                <li>
+                    <h5>MOIS</h5>
+                    <form>
+                        <span>
+                            <select name="choix_mois" id=""></select>
+                        </span>
+                    </form>
+                </li>
+            </ul>
+
+            <!-- Résultat -->
+            <p>Cela sera la saint XXXXX</p>
+
+        </div>
+        <!-- Fin du widget fête -->
+
+        <!-- Widgets accessibles -->
+        <div>
+            <!-- Pour la météo -->
+            <p>Entrez la localisation désirée :</p>
+
+            <!-- Pour la météo et la calculatrice -->
+            <ul>
+                <li><input type="text"></li>
+
+                <!-- Pour la calculatrice -->
+                <li><img src="images/erase_acc.svg" alt="Icône pour effacer"></li>
+            </ul>
+
+            <!-- Texte pour la météo et la fête du jour -->
+            <p></p>
+        </div>
+
+
+
+    </main>
+
+    <!-- Footer avec nom et prénom, c'est un lien vers mon github -->
+    <footer>
+        <a href="https://github.com/CDylan-source">
+            <h5>©Chapuis Dylan</h5>
+        </a>
+    </footer>
+
+</body>
+<script src="app.js"></script>
+
+</html>
