@@ -87,79 +87,79 @@
                 </dl>
                 <!-- Jours, icônes, risques de précipitations et températures (max et min) -->
                 <article>
-                    <p>Demain</p>
+                    <h3>XX/XX</h3>
                     <img src="images/cloudy.svg" alt="Deux nuages gris">
-                    <p></p>
+                    <p>XX%</p>
                     <ul>
-                        <li></li>
-                        <li></li>
+                        <li>XX°C</li>
+                        <li>XX°C</li>
                     </ul>
                 </article>
 
                 <article>
-                    <p></p>
+                    <h3>XX/XX</h3>
                     <img src="images/cloudy.svg" alt="Deux nuages gris">
-                    <p></p>
+                    <p>XX%</p>
                     <ul>
-                        <li></li>
-                        <li></li>
+                        <li>XX°C</li>
+                        <li>XX°C</li>
                     </ul>
                 </article>
 
                 <article>
-                    <p></p>
+                    <h3>XX/XX</h3>
                     <img src="images/cloudy.svg" alt="Deux nuages gris">
-                    <p></p>
+                    <p>XX%</p>
                     <ul>
-                        <li></li>
-                        <li></li>
+                        <li>XX°C</li>
+                        <li>XX°C</li>
                     </ul>
                 </article>
 
                 <article>
-                    <p></p>
+                    <h3>XX/XX</h3>
                     <img src="images/cloudy.svg" alt="Deux nuages gris">
-                    <p></p>
+                    <p>XX%</p>
                     <ul>
-                        <li></li>
-                        <li></li>
+                        <li>XX°C</li>
+                        <li>XX°C</li>
                     </ul>
                 </article>
 
                 <article>
-                    <p></p>
+                    <h3>XX/XX</h3>
                     <img src="images/cloudy.svg" alt="Deux nuages gris">
-                    <p></p>
+                    <p>XX%</p>
                     <ul>
-                        <li></li>
-                        <li></li>
+                        <li>XX°C</li>
+                        <li>XX°C</li>
                     </ul>
                 </article>
 
                 <article>
-                    <p></p>
+                    <h3>XX/XX</h3>
                     <img src="images/cloudy.svg" alt="Deux nuages gris">
-                    <p></p>
+                    <p>XX%</p>
                     <ul>
-                        <li></li>
-                        <li></li>
+                        <li>XX°C</li>
+                        <li>XX°C</li>
                     </ul>
                 </article>
 
                 <article>
-                    <p></p>
+                    <h3>XX/XX</h3>
                     <img src="images/cloudy.svg" alt="Deux nuages gris">
-                    <p></p>
+                    <p>XX%</p>
                     <ul>
-                        <li></li>
-                        <li></li>
+                        <li>XX°C</li>
+                        <li>XX°C</li>
                     </ul>
                 </article>
             </div>
             <!-- Fin des 7 jours -->
         </nav>
         <!-- Widget calculatrice -->
-        <div class="widget widget_deactivated">
+        <div class="widget widget_deactivated" id="wid_calc" onclick="calc_activ()">
             <ul>
                 <li>
                     <p>+</p>
@@ -174,6 +174,9 @@
 
         <!-- Version complète -->
         <div>
+            <!-- Button back -->
+            <button onclick="calc_closed();"></button>
+
             <input type="text">
             <ul>
                 <li>7</li>
@@ -205,7 +208,7 @@
 
 
         <!-- Widget convertisseur -->
-        <div class="widget widget_deactivated">
+        <div class="widget widget_deactivated" onclick="converter_activ();">
             <ul id="convert">
                 <li><img src="images/weight.svg"
                         alt="Deux poids avec une flèche d'équivalence, un en kilogramme, un en livre."></li>
@@ -233,6 +236,8 @@
         <!-- Version complète -->
         <div>
 
+            <!-- Button back -->
+            <button onclick="converter_closed();"></button>
             <!--Ligne du haut -->
             <ul>
                 <li>
@@ -263,12 +268,18 @@
                 <li>
                     <img src="images/weight_comp_selected.svg" alt="Icône représentant un poids">
                     <img src="images/ruler_comp.svg" alt="Icône représentant une règle">
+
+                </li>
+                <li>
                     <img src="images/temp_comp.svg" alt="Icône représentant un thermomètre">
                     <img src="images/money_comp.svg" alt="Icône représentant le symbole euro">
                 </li>
                 <li>
                     <img src="images/volume_comp.svg" alt="Icône représentant un cube">
                     <img src="images/area_comp.svg" alt="Icône représentant une aire">
+
+                </li>
+                <li>
                     <img src="images/speed_comp.svg" alt="Icône représentant un camion en train de rouler">
                     <img src="images/time_comp.svg" alt="Icône représentant une horloge">
                 </li>
@@ -278,12 +289,14 @@
         <!-- Fin du widget convertisseur -->
 
         <!-- Widget fête -->
-        <div class="widget widget_deactivated">
+        <div class="widget widget_deactivated" onclick="fete_activ();">
             <p>Saint</p>
             <p>XXXXX</p>
         </div>
         <!-- Version complète du widget -->
         <div>
+            <!-- Button back -->
+            <button onclick="fete_closed();"></button>
             <!-- Rappel de la fête du jour -->
             <h2>Aujourd'hui nous célébrons la saint XXXXX</h2>
 

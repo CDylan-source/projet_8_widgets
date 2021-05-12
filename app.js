@@ -166,3 +166,97 @@ function modal_close(){
     button_back.style.display = "block"
     footer.style.display = "flex"
 }
+
+
+// Calculatrice
+function calc_activ() {
+    document.getElementsByTagName('div')[3].className = 'menu_active';
+    var widget = document.body.querySelectorAll(".widget");
+    widget.forEach(Element => {
+        Element.className = "widget widget_deactivated";
+        Element.innerHTML = "";
+    })
+    button_main.className = "main_button_deactivated";
+}
+
+
+
+
+function calc_closed() {
+    document.getElementsByTagName('div')[3].className = '';
+    var widget = document.body.querySelectorAll(".widget");
+    widget.forEach(Element => {
+        Element.className = "widget widget_tapped"
+    });
+
+    var widget2 = document.querySelector("div:nth-of-type(2)")
+    var widget3 = document.querySelector("div:nth-of-type(4)")
+    var widget4 = document.querySelector("div:nth-of-type(6)")
+    button_main.inner = "-";
+    widget2.innerHTML = "<ul> <li> <p>+</p> <p>-</p> </li><li><p>*</p><p>/</p></li></ul>"
+    widget3.innerHTML = "<ul id=\"convert\"><li><img src=\"images/weight.svg\" alt=\"Deux poids avec une flèche d'équivalence, un en kilogramme, un en livre.\"></li><li> <img src=\"images/ruler_equiv.svg\"alt=\"Deux règles avec une flèche d'équivalence, une en mètre, l'autre en unité atomique.\"></li><li><img src=\"images/temp_equiv.svg\"                        alt=\"Deux thermomètres séparés pas une flèche d'équivalence, un en degré Celsius, l'autre en degré Fahrenheit.\"></li><li><img src=\"images/money_equiv.svg\"alt=\"Le symbole dollar connecté au symbole euro par une flèche d'équivalence.\"></li><li><img src=\"images/volume_equiv.svg\"alt=\"Deux cubes séparés par une flèche d'équivalence, l'un en mètre cube, l'autre en litre.\"></li><li><img src=\"images/area_equiv.svg\"alt=\"Deux aires séparées par une flèche d'équivalence, l'une en mètre carré, l'autre en hectare.\"></li><li><img src=\"images/speed_equiv.svg\"alt=\"Deux camions avançant à toute allure, séparés par une flèche d'équivalence avec pour unité respective kilomètre par heure et mètre par seconde.\"></li><li><img src=\"images/time_equiv.svg\"alt=\"Deux horloges avec une flèche d'équivalence, une en heure, l'autre en seconde.\"></li></ul>"
+    widget4.innerHTML = "<p>Saint</p><p>XXXXX</p>"
+    button_main.className = "button_untapped button_tapped";
+}
+
+// Converter
+function converter_activ() {
+    document.getElementsByTagName('div')[5].className = 'menu_active';
+    var widget = document.body.querySelectorAll(".widget");
+    widget.forEach(Element => {
+        Element.className = "widget widget_deactivated";
+        Element.innerHTML = "";
+    })
+    button_main.className = "main_button_deactivated";
+}
+
+
+
+
+function converter_closed() {
+    document.getElementsByTagName('div')[5].className = '';
+    var widget = document.body.querySelectorAll(".widget");
+    widget.forEach(Element => {
+        Element.className = "widget widget_tapped"
+    });
+
+    var widget2 = document.querySelector("div:nth-of-type(2)")
+    var widget3 = document.querySelector("div:nth-of-type(4)")
+    var widget4 = document.querySelector("div:nth-of-type(6)")
+    button_main.inner = "-";
+    widget2.innerHTML = "<ul> <li> <p>+</p> <p>-</p> </li><li><p>*</p><p>/</p></li></ul>"
+    widget3.innerHTML = "<ul id=\"convert\"><li><img src=\"images/weight.svg\" alt=\"Deux poids avec une flèche d'équivalence, un en kilogramme, un en livre.\"></li><li> <img src=\"images/ruler_equiv.svg\"alt=\"Deux règles avec une flèche d'équivalence, une en mètre, l'autre en unité atomique.\"></li><li><img src=\"images/temp_equiv.svg\"                        alt=\"Deux thermomètres séparés pas une flèche d'équivalence, un en degré Celsius, l'autre en degré Fahrenheit.\"></li><li><img src=\"images/money_equiv.svg\"alt=\"Le symbole dollar connecté au symbole euro par une flèche d'équivalence.\"></li><li><img src=\"images/volume_equiv.svg\"alt=\"Deux cubes séparés par une flèche d'équivalence, l'un en mètre cube, l'autre en litre.\"></li><li><img src=\"images/area_equiv.svg\"alt=\"Deux aires séparées par une flèche d'équivalence, l'une en mètre carré, l'autre en hectare.\"></li><li><img src=\"images/speed_equiv.svg\"alt=\"Deux camions avançant à toute allure, séparés par une flèche d'équivalence avec pour unité respective kilomètre par heure et mètre par seconde.\"></li><li><img src=\"images/time_equiv.svg\"alt=\"Deux horloges avec une flèche d'équivalence, une en heure, l'autre en seconde.\"></li></ul>"
+    widget4.innerHTML = "<p>Saint</p><p>XXXXX</p>"
+    button_main.className = "button_untapped button_tapped";
+}
+
+// Fête
+function fete_activ() {
+    document.getElementsByTagName('div')[7].className = 'menu_active';
+    var widget = document.body.querySelectorAll(".widget");
+    widget.forEach(Element => {
+        Element.className = "widget widget_deactivated";
+        Element.innerHTML = "";
+    })
+    button_main.className = "main_button_deactivated";
+}
+
+
+
+
+function fete_closed() {
+    document.getElementsByTagName('div')[7].className = '';
+    var widget = document.body.querySelectorAll(".widget");
+    widget.forEach(Element => {
+        Element.className = "widget widget_tapped"
+    });
+
+    var widget2 = document.querySelector("div:nth-of-type(2)")
+    var widget3 = document.querySelector("div:nth-of-type(4)")
+    var widget4 = document.querySelector("div:nth-of-type(6)")
+    button_main.inner = "-";
+    widget2.innerHTML = "<ul> <li> <p>+</p> <p>-</p> </li><li><p>*</p><p>/</p></li></ul>"
+    widget3.innerHTML = "<ul id=\"convert\"><li><img src=\"images/weight.svg\" alt=\"Deux poids avec une flèche d'équivalence, un en kilogramme, un en livre.\"></li><li> <img src=\"images/ruler_equiv.svg\"alt=\"Deux règles avec une flèche d'équivalence, une en mètre, l'autre en unité atomique.\"></li><li><img src=\"images/temp_equiv.svg\"                        alt=\"Deux thermomètres séparés pas une flèche d'équivalence, un en degré Celsius, l'autre en degré Fahrenheit.\"></li><li><img src=\"images/money_equiv.svg\"alt=\"Le symbole dollar connecté au symbole euro par une flèche d'équivalence.\"></li><li><img src=\"images/volume_equiv.svg\"alt=\"Deux cubes séparés par une flèche d'équivalence, l'un en mètre cube, l'autre en litre.\"></li><li><img src=\"images/area_equiv.svg\"alt=\"Deux aires séparées par une flèche d'équivalence, l'une en mètre carré, l'autre en hectare.\"></li><li><img src=\"images/speed_equiv.svg\"alt=\"Deux camions avançant à toute allure, séparés par une flèche d'équivalence avec pour unité respective kilomètre par heure et mètre par seconde.\"></li><li><img src=\"images/time_equiv.svg\"alt=\"Deux horloges avec une flèche d'équivalence, une en heure, l'autre en seconde.\"></li></ul>"
+    widget4.innerHTML = "<p>Saint</p><p>XXXXX</p>"
+    button_main.className = "button_untapped button_tapped";
+}

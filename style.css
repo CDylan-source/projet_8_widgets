@@ -432,7 +432,7 @@ footer a {
 }
 
 /* Bouton + */
-main button:nth-of-type(1) {
+main>button {
     width: 20vw;
     height: 20vw;
     border-radius: 9999px;
@@ -442,8 +442,8 @@ main button:nth-of-type(1) {
     font-size: 4.5rem;
     position: absolute;
     z-index: 2;
-    -webkit-animation: text-focus-in 0.3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-    animation: text-focus-in 0.3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    -webkit-animation: text-focus-in 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-focus-in 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
     transition-duration: 0.5s;
 }
 
@@ -493,8 +493,6 @@ div:nth-of-type(6) {
     width: 40.6vw;
     height: 40.6vw;
     border-radius: 9999px;
-
-
 }
 
 .widget_tapped:nth-of-type(1) {
@@ -595,9 +593,7 @@ div:nth-of-type(4) img {
     width: 100%;
 }
 
-div:nth-of-type(5) {
-    display: none;
-}
+
 
 /* Widget fête */
 
@@ -609,9 +605,7 @@ div:nth-of-type(6) p {
     font-family: 'Source sans pro';
 }
 
-div:nth-of-type(7) {
-    display: none;
-}
+
 
 div:nth-of-type(8) {
     display: none;
@@ -651,11 +645,19 @@ nav button {
     align-self: flex-end;
     justify-self: unset;
     top: 3%;
+     border: none;
+     border-radius: 9999px;
+     font-size: 4.5rem;
+     position: absolute;
+     z-index: 2;
+     -webkit-animation: text-focus-in 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+     animation: text-focus-in 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+     transition-duration: 0.5s;
 }
 
 /* Champ pour rentrer la ville */
 nav input {
-    
+
     width: 77vw;
     align-self: center;
     padding: 1.2rem;
@@ -664,6 +666,7 @@ nav input {
     box-shadow: -4px -4px 4px 0px #00000040 inset;
     font-size: 1.25rem;
     margin-top: 15vh;
+    border: none;
 }
 
 /* Partie imagée et température */
@@ -676,7 +679,7 @@ nav>article {
 
 nav>article>h2 {
     font-size: 5.5rem;
-   margin-bottom: 3vh;
+    margin-bottom: 3vh;
     margin-left: 3.5vh;
 }
 
@@ -701,53 +704,53 @@ nav>article>p:nth-of-type(2) {
 
 .rain {
     background: url(images/rain.svg) 150% no-repeat, #41BA9C;
-    
+
 }
 
 .storm {
     background: url(images/storm.svg) 150% no-repeat, #656D78;
-    
+
 }
 
 .snow {
     background: url(images/snow.svg) 150% no-repeat, #CCD1D9;
     color: black;
-    
+
 }
 
 .sun {
     background: url(images/sunny.svg) 150% no-repeat, #4FC1E9;
-    
+
 }
 
 /* Heure du levé et du coucher du soleil */
-nav>ul{
+nav>ul {
     list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-nav>dl{
+nav>dl {
     text-align: center;
     letter-spacing: 0.35rem;
-    
+
 }
 
-nav>dl>dt>img{
+nav>dl>dt>img {
     width: 3rem;
     align-self: center;
-    
+
 }
 
 
-nav>div{
+nav>div {
     display: none;
     position: fixed;
     z-index: 1;
-    top:10vh;
+    top: 10vh;
     width: 100%;
-    height: 90vh;
+    height: 85vh;
     background: linear-gradient(180deg, #4E4376 11.77%, #2B5876 100%);
     animation-name: animatetop;
     animation-duration: 0.5s;
@@ -755,30 +758,502 @@ nav>div{
 }
 
 @keyframes animatetop {
-    from {top:100vh; opacity:0} to {top:10vh; opacity: 1;}
+    from {
+        top: 100vh;
+        opacity: 0
+    }
+
+    to {
+        top: 10vh;
+        opacity: 1;
+    }
 }
 
-.modal_activated{
+.modal_activated {
     flex-direction: column;
     justify-content: space-between;
 }
 
-nav>div h3{
+nav>div>dl h3 {
     color: white;
     text-align: center;
     letter-spacing: 0.35rem;
 }
 
-nav>div>dl{
+nav>div>dl {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-nav>div>dl img{
+nav>div>dl img {
     width: 3rem;
 }
 
-nav>div ul{
+nav>div ul {
     list-style: none;
+}
+
+nav>div>article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5%;
+    color: white;
+    margin-right: 5%;
+}
+
+nav>div>article>p {
+    color: #1875FF;
+}
+
+/* Fin modal */
+
+/* Calculatrice */
+div:nth-of-type(3) {
+    display: flex;
+    flex-direction: column;
+    width: 86vw;
+    
+    position: fixed;
+    left: 7vw;
+    top: 28vh;
+    justify-content: space-between;
+    border-radius: 1.25rem;
+    background: linear-gradient(180deg, #09203F 0%, #537895 100%);
+    opacity: 0.95;
+    transform: scale(0) translateX(-200vw);
+    transition: all 1s;
+    font-family: 'Source sans pro';
+}
+
+/* Button Back */
+div:nth-of-type(3) button {
+    background-image: url(images/back.svg);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 6rem;
+    height: 6rem;
+    top: -20vh;
+    right: 2vw
+}
+
+/* Écran */
+div:nth-of-type(3) input {
+    width: 77vw;
+    align-self: center;
+    padding: 1.2rem;
+    border-radius: 10rem;
+    box-shadow: 4px 4px 4px 0px #00000040 inset;
+    box-shadow: -4px -4px 4px 0px #00000040 inset;
+    font-size: 1.25rem;
+    margin-top: 5%;
+    border: none;
+}
+
+/* Button erase */
+div:nth-of-type(3) img {
+    margin-bottom: 5%;
+    width: 3rem;
+    align-self: flex-end;
+    margin-right: 10%;
+}
+
+div.menu_active {
+    transform: scale(1) translate(0);
+}
+
+div:nth-of-type(3) ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 2.66rem;
+    margin-right: 2.66rem;
+    color: white;
+    font-size: 2.5rem;
+}
+
+div:nth-of-type(3) li {
+    padding: 0.5rem;
+}
+
+/* Fin calculatrice */
+
+/* Widget convertisseur */
+div:nth-of-type(5) {
+    display: flex;
+    flex-direction: column;
+    width: 86vw;
+    
+    position: fixed;
+    left: 7vw;
+    top: 28vh;
+    justify-content: space-between;
+    border-radius: 1.25rem;
+    background: linear-gradient(180deg, #4E4376 11.77%, #2B5876 100%);
+    transform: scale(0) translateX(-200vw);
+    transition: all 1s;
+    font-family: 'Source sans pro';
+}
+
+div:nth-of-type(5) button {
+    background-image: url(images/back.svg);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 6rem;
+    height: 6rem;
+    top: -20vh;
+    right: 2vw
+}
+
+div:nth-of-type(5) ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+div:nth-of-type(5) li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+div:nth-of-type(5) li img {
+    width: 4rem;
+    margin-bottom: 25%;
+
+}
+
+div.menu_active {
+    transform: scale(1) translate(0);
+}
+
+div:nth-of-type(5) li form {
+    width: 30vw;
+    padding: 0.5rem;
+    font-size: 2rem;
+    border-radius: 10rem;
+    box-shadow: 4px 4px 4px 0px #00000040 inset;
+    box-shadow: -4px -4px 4px 0px #00000040 inset;
+    box-shadow: -35px 0px 0px 0px #25333A inset;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background: white;
+
+
+}
+
+
+div:nth-of-type(5) input {
+    width: 30vw;
+    padding: 1.5rem;
+    border-radius: 10rem;
+    box-shadow: 4px 4px 4px 0px #00000040 inset;
+    box-shadow: -4px -4px 4px 0px #00000040 inset;
+    border: none;
+}
+
+/* Widget fête */
+div:nth-of-type(7){
+        display: flex;
+        flex-direction: column;
+        width: 86vw;
+        height: 68vh;
+        position: fixed;
+        left: 7vw;
+        top: 23vh;
+        justify-content: space-between;
+        border-radius: 1.25rem;
+        background: linear-gradient(180deg, #FEE140 1.87%, #FA709A 86.77%);
+        transform: scale(0) translateX(-200vw);
+        transition: all 1s;
+        font-family: 'Source sans pro';
+}
+
+div:nth-of-type(7) button {
+    background-image: url(images/back.svg);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 6rem;
+    height: 6rem;
+    top: -15vh;
+    right: 2vw
+}
+
+div.menu_active {
+    transform: scale(1) translate(0);
+}
+
+div:nth-of-type(7) h2{
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    letter-spacing: 0.25rem;
+    padding: 0.5rem;
+}
+
+div:nth-of-type(7) ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+    color: white;
+    letter-spacing: 0.5rem;
+    font-size: 2.33rem;
+    text-align: center;
+}
+
+div:nth-of-type(7)>p{
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem;
+    letter-spacing: 0.25rem;
+}
+
+div:nth-of-type(7) form{
+    background: white;
+    box-shadow: 4px 4px 4px 0px #00000040 inset;
+    box-shadow: -4px -4px 4px 0px #00000040 inset;
+    box-shadow: -35px 0px 0px 0px #CF4040 inset;
+    width : 30vw;
+    border-radius: 10rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+@media (min-width : 768px){
+    header article h1 {
+        font-size: 3rem;
+    }
+    
+    div:nth-of-type(6) p{
+        font-size: 3rem;
+    }
+
+    div:nth-of-type(2) p{
+        font-size: 5rem;
+    }
+
+    nav input{
+        font-size: 3rem;
+        margin-top: 19vh;
+        margin-bottom: 2vh;
+    }
+    
+    nav article h2{
+        font-size: 6rem;
+        padding: 1rem;
+    }
+
+    nav>article>p{
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+    
+    nav>article>p:nth-child(3){
+        color: #1875FF;
+        margin-top: 2rem;
+    }
+
+    nav>ul>li img{
+        width: 6rem;
+        margin-top: 2vh;
+    }
+    nav>ul{
+        text-align: center;
+        font-size: 2rem;
+        letter-spacing: 0.25rem;
+    }
+    nav>dl h3{
+        font-size: 2rem;
+        margin-top: 1rem;
+        letter-spacing: 0.5rel;
+    }
+    nav>dl>dt img{
+        width: 6rem;
+        margin-top: -1rem;
+    }
+
+    nav>div>dl h3{
+        font-size: 3rem;
+    }
+    nav>div>dl img{
+        width: 5rem;
+    }
+
+    nav>div>article{
+        font-size: 1.8rem;
+    }
+
+    nav>div>article>p{
+        font-size: 2rem;
+    }
+    nav>div>article>img{
+        width: 4rem;
+    }
+
+    footer{
+        font-size: 2rem;
+    }
+    
+    div:nth-of-type(3){
+       top:24vh;
+    }
+
+    div:nth-of-type(3)>button{
+        top:-14vh;
+    }
+
+    div:nth-of-type(3)>input{
+        font-size: 3rem;
+        padding: 2rem;
+    }
+
+    div:nth-of-type(3)>ul{
+        font-size: 4rem;
+        padding: 0.5rem;
+    }
+
+    div:nth-of-type(3)>img{
+        width: 5rem;
+        margin-right: 2rem;
+    }
+
+    div:nth-of-type(5){
+        justify-content: space-between;
+        top:24vh
+    }
+
+    div:nth-of-type(5)>ul{
+        justify-content: space-between;
+        padding: 2rem;
+    }
+
+    div:nth-of-type(5)>ul>li>form{
+        font-size: 3rem;
+    }
+
+    div:nth-of-type(5) input{
+        font-size: 3rem;
+    }
+
+    div:nth-of-type(5)>ul>li>img{
+        width: 12.5vw;
+    }
+
+    div:nth-of-type(5) button{
+        top: -12vh;
+    }
+    div:nth-of-type(7) h2{
+        font-size: 4rem;
+    }
+    div:nth-of-type(7) h5{
+        font-size: 3rem;
+        letter-spacing: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
+    div:nth-of-type(7) form{
+        font-size: 3rem;
+        padding: 0.5rem;
+    }
+
+    div:nth-of-type(7)>p{
+        font-size: 4rem;
+    }
+}
+
+@media (min-width : 1280px){
+    body{
+        background-image: url(images/background2_desktop_modif.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+
+    header img{
+        width: 10vw;
+    }
+
+    main>button{
+        width: 10vw;
+        height: 10vw;
+        font-size: 8rem;
+    }
+
+    .button_untapped{
+        top:calc(50vh - 5vw);
+        left:45vw;
+    }
+
+    .widget_tapped {
+        width: 25vw;
+        height: 30vh;
+        border-radius: 2rem;
+    }
+
+    .widget{
+    top:35vh;
+    left: 37.5vw;
+    border-radius: 2rem;
+    }
+
+    .widget_tapped:nth-of-type(1) {
+        transform: scale(1) translate(0vw, -30vh);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .widget_tapped:nth-of-type(2) {
+        transform: scale(1) translate(32.5vw, 0vh);
+    }
+
+    .widget_tapped:nth-of-type(4) {
+        transform: scale(1) translate(-32.5vw, 0vh);
+    }
+
+    .widget_tapped:nth-of-type(6) {
+        transform: scale(1) translate(0vw, 30vh);
+    }
+
+    div:nth-of-type(2) p {
+        font-size: 6rem;
+        width: 6vw;
+        height: 6vw;
+    }
+
+    nav>button{
+        left: 0;
+        width: 5vw;
+        height: 5vw;
+        top: 45%;
+    }
+
+    nav>input{
+        width: 30%;
+        position: absolute;
+    }
+
+    .night{
+        background-position: right 5%;
+        background-size: auto;
+    }
+
+    nav{
+        flex-direction: row;
+        
+    }
+
 }
