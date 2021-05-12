@@ -34,127 +34,141 @@
     <!-- Main avec beaucoup d'éléments qui ne seront visibles qu'une fois le bouton appuyé -->
     <main>
 
-        <!-- Button back, caché la plupart du temps -->
-        <button></button>
+
+
 
         <!-- Bouton principal qui déroule le reste -->
         <button onclick="button_tapped();clickcounter();" class="button_untapped">+</button>
 
         <!-- Widget météo -->
-        <div class="widget widget_deactivated">
-            
+        <div class="widget widget_deactivated" onclick="meteo_activ();">
+
         </div>
 
         <!-- Une fois ouvert, widget complet -->
 
-        <!-- Input pour rentrer la ville -->
-        <input type="text">
+        <nav>
+            <!-- Button back -->
+            <button onclick="meteo_closed();"></button>
+            <!-- Input pour rentrer la ville -->
+            <input type="text">
 
-        <!-- Article qui comprend l'icône ainsi que son thème, la température, feelslike et les risques de précipitations -->
-        <article>
-            <h2></h2>
-            <p>Température ressentie : XX°C</p>
-            <p></p>
-            <p>Risques de précipitations : XX%</p>
-        </article>
-
-        <!-- Liste avec images et heures pour donner le début de journée et la fin -->
-        <ul>
-            <li><img src="images/sunrise.svg" alt="Un soleil levant">
-                <p></p>
-            </li>
-            <li><img src="images/sunset.svg" alt="Un soleil couchant">
-                <p></p>
-            </li>
-        </ul>
-
-        <!-- Lien vers modal -->
-        <h3>Prévisions sur 7 jours</h3>
-        <img src="images/modal.svg" alt="Une flèche vers le bas">
-
-        <!-- Modal -->
-        <div>
-            <h3>Prévisions sur 7 jours</h3>
-            <img src="images/modal_up.svg" alt="Une flèche vers le haut">
-
-            <!-- Jours, icônes, risques de précipitations et températures (max et min) -->
-            <article>
-                <p>Demain</p>
-                <img src="images/cloudy.svg" alt="Deux nuages gris">
-                <p></p>
-                <ul>
-                    <li></li>
-                    <li></li>
-                </ul>
+            <!-- Article qui comprend l'icône ainsi que son thème, la température, feelslike et les risques de précipitations -->
+            <article class="night">
+                <h2>X°C</h2>
+                <p>Température ressentie : XX°C</p>
+                <p>Risques de précipitations : XX%</p>
             </article>
 
-            <article>
-                <p></p>
-                <img src="images/cloudy.svg" alt="Deux nuages gris">
-                <p></p>
-                <ul>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </article>
+            <!-- Liste avec images et heures pour donner le début de journée et la fin -->
+            <ul>
+                <li><img src="images/sunrise.svg" alt="Un soleil levant">
+                    <p>XX:XX:XX</p>
+                </li>
+                <li><img src="images/sunset.svg" alt="Un soleil couchant">
+                    <p>XX:XX:XX</p>
+                </li>
+            </ul>
 
-            <article>
-                <p></p>
-                <img src="images/cloudy.svg" alt="Deux nuages gris">
-                <p></p>
-                <ul>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </article>
+            <!-- Lien vers modal -->
+            <dl>
+                <dd>
+                    <h3 onclick="modal();">Prévisions sur 7 jours</h3>
+                </dd>
+                <dt><img src="images/modal.svg" alt="Une flèche vers le bas" onclick="modal();"></dt>
+            </dl>
+            <!-- Modal -->
+            <div>
+                <dl>
+                    <dd>
+                        <h3 onclick="modal_close();">Prévisions sur 7 jours</h3>
+                    </dd>
+                    <dt> <img src="images/modal_up.svg" alt="Une flèche vers le haut" onclick="modal_close();"></dt>
+                </dl>
+                <!-- Jours, icônes, risques de précipitations et températures (max et min) -->
+                <article>
+                    <p>Demain</p>
+                    <img src="images/cloudy.svg" alt="Deux nuages gris">
+                    <p></p>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </article>
 
-            <article>
-                <p></p>
-                <img src="images/cloudy.svg" alt="Deux nuages gris">
-                <p></p>
-                <ul>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </article>
+                <article>
+                    <p></p>
+                    <img src="images/cloudy.svg" alt="Deux nuages gris">
+                    <p></p>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </article>
 
-            <article>
-                <p></p>
-                <img src="images/cloudy.svg" alt="Deux nuages gris">
-                <p></p>
-                <ul>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </article>
+                <article>
+                    <p></p>
+                    <img src="images/cloudy.svg" alt="Deux nuages gris">
+                    <p></p>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </article>
 
-            <article>
-                <p></p>
-                <img src="images/cloudy.svg" alt="Deux nuages gris">
-                <p></p>
-                <ul>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </article>
+                <article>
+                    <p></p>
+                    <img src="images/cloudy.svg" alt="Deux nuages gris">
+                    <p></p>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </article>
 
-            <article>
-                <p></p>
-                <img src="images/cloudy.svg" alt="Deux nuages gris">
-                <p></p>
-                <ul>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </article>
-        </div>
-        <!-- Fin des 7 jours -->
+                <article>
+                    <p></p>
+                    <img src="images/cloudy.svg" alt="Deux nuages gris">
+                    <p></p>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </article>
 
+                <article>
+                    <p></p>
+                    <img src="images/cloudy.svg" alt="Deux nuages gris">
+                    <p></p>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </article>
+
+                <article>
+                    <p></p>
+                    <img src="images/cloudy.svg" alt="Deux nuages gris">
+                    <p></p>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </article>
+            </div>
+            <!-- Fin des 7 jours -->
+        </nav>
         <!-- Widget calculatrice -->
         <div class="widget widget_deactivated">
             <ul>
-                <li><p>+</p><p>-</p></li>
-                <li><p>*</p><p>/</p></li>
+                <li>
+                    <p>+</p>
+                    <p>-</p>
+                </li>
+                <li>
+                    <p>*</p>
+                    <p>/</p>
+                </li>
             </ul>
         </div>
 
@@ -192,7 +206,28 @@
 
         <!-- Widget convertisseur -->
         <div class="widget widget_deactivated">
-            <img src="images/weight.svg" alt="Deux poids avec une flèche d'équivalence, un en kilogramme, un en livre.">
+            <ul id="convert">
+                <li><img src="images/weight.svg"
+                        alt="Deux poids avec une flèche d'équivalence, un en kilogramme, un en livre."></li>
+                <li> <img src="images/ruler_equiv.svg"
+                        alt="Deux règles avec une flèche d'équivalence, une en mètre, l'autre en unité atomique."></li>
+                <li><img src="images/temp_equiv.svg"
+                        alt="Deux thermomètres séparés pas une flèche d'équivalence, un en degré Celsius, l'autre en degré Fahrenheit.">
+                </li>
+                <li><img src="images/money_equiv.svg"
+                        alt="Le symbole dollar connecté au symbole euro par une flèche d'équivalence."></li>
+                <li><img src="images/volume_equiv.svg"
+                        alt="Deux cubes séparés par une flèche d'équivalence, l'un en mètre cube, l'autre en litre.">
+                </li>
+                <li><img src="images/area_equiv.svg"
+                        alt="Deux aires séparées par une flèche d'équivalence, l'une en mètre carré, l'autre en hectare.">
+                </li>
+                <li><img src="images/speed_equiv.svg"
+                        alt="Deux camions avançant à toute allure, séparés par une flèche d'équivalence avec pour unité respective kilomètre par heure et mètre par seconde.">
+                </li>
+                <li><img src="images/time_equiv.svg"
+                        alt="Deux horloges avec une flèche d'équivalence, une en heure, l'autre en seconde."></li>
+            </ul>
         </div>
 
         <!-- Version complète -->
@@ -203,7 +238,7 @@
                 <li>
                     <form>
                         <span>
-                            <select name="choix_unite" id=""></select>
+                            <select name="choix_unite" id="a"></select>
                         </span>
                     </form>
                 </li>
@@ -211,7 +246,7 @@
                 <li>
                     <form>
                         <span>
-                            <select name="choix_unite2" id=""></select>
+                            <select name="choix_unite2" id="b"></select>
                         </span>
                     </form>
                 </li>
@@ -259,7 +294,7 @@
                     <h5>JOUR</h5>
                     <form>
                         <span>
-                            <select name="choix_jour" id=""></select>
+                            <select name="choix_jour" id="c"></select>
                         </span>
                     </form>
                 </li>
@@ -268,7 +303,7 @@
                     <h5>MOIS</h5>
                     <form>
                         <span>
-                            <select name="choix_mois" id=""></select>
+                            <select name="choix_mois" id="d"></select>
                         </span>
                     </form>
                 </li>
@@ -303,12 +338,14 @@
 
     <!-- Footer avec nom et prénom, c'est un lien vers mon github -->
     <footer>
-        <a href="https://github.com/CDylan-source">
+        <a href="https://github.com/CDylan-source" target="_blank">
             <h5>©Chapuis Dylan</h5>
         </a>
     </footer>
 
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 <script src="app.js"></script>
 
 </html>
